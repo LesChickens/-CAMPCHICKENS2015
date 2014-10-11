@@ -22,14 +22,10 @@
 				<p>Just view the source and copy the code to get started. All the CSS and JS is linked to the jQuery CDN versions so this is super easy to set up. Remember to include a meta viewport tag in the head to set the zoom level.</p>
 				<p>You link to internal pages by referring to the <code>id</code> of the page you want to show. For example, to <a href="#two" >link</a> to the page with an <code>id</code> of "two", my link would have a <code>href="#two"</code> in the code.</p>	
 				<h3>Show internal pages:</h3>
-				<p><a href="#schedule" data-role="button">Schedule</a></p>
-				<p><a href="#three" data-role="button">Plan</a></p>
-				<p><a href="#four" data-role="button">Contact</a></p>
-				<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>
-
                 <p><a href="#itinerary" data-role="button" data-rel="dialog" data-transition="pop">Itinéraire</a></p>
                 <p><a href="#cyclingItinerary" data-role="button" data-rel="dialog" data-transition="pop">Carte parcours vélo</a></p>
                 <p><a href="#planning" data-role="button" data-rel="dialog" data-transition="pop">Planning du camp</a></p>
+                <p><a href="#hotChickensChallange" data-role="button" data-rel="dialog" data-transition="pop">Défi hot chickens</a></p>
 			</div>
 			<div data-role="footer" data-theme="d">
 				<h4>Page Footer</h4>
@@ -76,12 +72,8 @@
 				<h1>Planning du camp</h1>
 			</div>
 			<div data-role="content" >
-				<h2>Itinéraire à suivre pour se rendre au camp chicken </h2>
+				<h2>Voici la liste des activitées qui vous seront proposées</h2>
 				<p>I have an <code>id</code> of "one" on my page container. I'm first in the source order so I'm shown when the page loads.</p>
-				<p>This is a multi-page boilerplate template that you can copy to build your first jQuery Mobile page. This template contains multiple "page" containers inside, unlike a <a href="page-template.html"> single page template</a> that has just one page within it.</p>
-				<p>Just view the source and copy the code to get started. All the CSS and JS is linked to the jQuery CDN versions so this is super easy to set up. Remember to include a meta viewport tag in the head to set the zoom level.</p>
-				<p>You link to internal pages by referring to the <code>id</code> of the page you want to show. For example, to <a href="#two" >link</a> to the page with an <code>id</code> of "two", my link would have a <code>href="#two"</code> in the code.</p>
-				<h3>Show internal pages:</h3>
 				<p><a href="#two" data-role="button">Show page "two"</a></p>
 				<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>
 			</div>
@@ -89,5 +81,19 @@
 				<h4>Page Footer</h4>
 			</div>
 		</div>
+        <div data-role="page" id="hotChickensChallange">
+            <div data-role="header">
+                <h1>Défi hot chickens</h1>
+            </div>
+            <div data-role="content" >
+                <h2>Voici la liste des activitées qui vous seront proposées</h2>
+                <p>I have an <code>id</code> of "one" on my page container. I'm first in the source order so I'm shown when the page loads.</p>
+                <p><a href="#two" data-role="button">Show page "two"</a></p>
+                <p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>
+            </div>
+            <div data-role="footer" data-theme="d">
+                <h4>Page Footer</h4>
+            </div>
+        </div>
 	</body>
 </html>
