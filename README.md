@@ -14,6 +14,12 @@ César Jeanroy
 Léo Davesne: http://about.me/leodavesne
 
 
+Trello Board
+---------------------
+
+https://trello.com/b/f3WMM8Gw/application-camp-chickens
+
+
 Copyright and license
 ---------------------
 
