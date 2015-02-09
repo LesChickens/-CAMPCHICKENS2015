@@ -1,3 +1,7 @@
+-- acc pour Application Camp Chickens
+CREATE DATABASE acc
+
+-- Champs de base pour la V1
 CREATE TABLE events (
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	title VARCHAR(50) NOT NULL,
