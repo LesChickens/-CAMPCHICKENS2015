@@ -1,0 +1,2 @@
+INSERT INTO events (title, short_description, long_description, start_date, end_date, author, category, level)
+VALUES ('Nutrition 101', 'Les bases de la nutrition', 'Les bases de la nutrition : les connaissances de base nécessaires pour bien gérer sa nutrition en triathlon', '2015-05-15 20:00:00', '2015-05-15 20:30:00', 'Joanie', 'Nutrition', 'Débutant')
