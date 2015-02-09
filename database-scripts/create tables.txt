@@ -1,0 +1,11 @@
+CREATE TABLE events (
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	title VARCHAR(50) NOT NULL,
+	short_description VARCHAR(100) NOT NULL,
+	long_description VARCHAR(255) NOT NULL,
+	start_date DATETIME NOT NULL,
+	end_date DATETIME NOT NULL,
+	author VARCHAR(20) NOT NULL,
+	category VARCHAR(20) NOT NULL,
+	level VARCHAR(20) NOT NULL
+);
