@@ -1,5 +1,7 @@
 -- acc pour Application Camp Chickens
-CREATE DATABASE acc
+CREATE DATABASE acc;
+
+USE acc;
 
 -- Champs de base pour la V1
 CREATE TABLE events (
