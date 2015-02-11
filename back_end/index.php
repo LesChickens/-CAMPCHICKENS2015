@@ -25,7 +25,7 @@
 			$row_array['id'] = $row['id'];
 			$row_array['short_description'] = $row['short_description'];
 			//$row_array['long_description'] = $row['long_description'];
-			//$row_array['start_date'] = //$row['start_date'];
+			//$row_array['start_date'] = $row['start_date'];
 			//$row_array['end_date'] = $row['end_date'];
 			//$row_array['author'] = $row['author'];
 			//$row_array['category'] = $row['category'];

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "ACC", "ACC.phpproj", "{0C74C73B-4F3D-4FAF-B6E4-6DB2A93E4E8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C74C73B-4F3D-4FAF-B6E4-6DB2A93E4E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C74C73B-4F3D-4FAF-B6E4-6DB2A93E4E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C74C73B-4F3D-4FAF-B6E4-6DB2A93E4E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C74C73B-4F3D-4FAF-B6E4-6DB2A93E4E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
