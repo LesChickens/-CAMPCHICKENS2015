@@ -3,12 +3,16 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> <!-- meta pour optimiser l'affichage de la google map sur les mobiles -->
 		<title>Camp Chickens 2015</title>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/general.css"/>
-		<script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/jquery-1.8.3.min.js"></script>
 		<script src="js/jquery.mobile-1.2.1.min.js"></script>
 		<script defer type="application/javascript" src="js/general.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+        <script defer type="application/javascript" src="js/google_map.js"></script>
+        <script defer type="application/javascript" src="js/teams_page.js"></script>
 	</head>
 	<body>
 		<div data-role="page" id="welcome">
@@ -36,13 +40,14 @@
 				<h4>Page Footer</h4>
 			</div>
 		</div>
-		<div data-role="page" id="itinerary">
+		<div data-role="page" id="itinerary" data-dom-cache="true">
 			<div data-role="header">
 				<h1>Itinéraire</h1>
 			</div>
 			<div data-role="content" >
 				<h2>Itinéraire à suivre pour se rendre au camp chicken </h2>
 				<p>CARTE GOOGLE MAP</p>
+                </div>
                 <p><a href="#lift" data-role="button">Liste de lifts</a></p>
                 <p><a href="#welcome" data-role="button">Accueil</a></p>
 			</div>
@@ -67,12 +72,7 @@
 				<h1>Carte du parcours vélo</h1>
 			</div>
 			<div data-role="content" >
-				<h2>Itinéraire à suivre pour se rendre au camp chicken </h2>
-				<p>I have an <code>id</code> of "one" on my page container. I'm first in the source order so I'm shown when the page loads.</p>
-				<p>This is a multi-page boilerplate template that you can copy to build your first jQuery Mobile page. This template contains multiple "page" containers inside, unlike a <a href="page-template.html"> single page template</a> that has just one page within it.</p>
-				<p>Just view the source and copy the code to get started. All the CSS and JS is linked to the jQuery CDN versions so this is super easy to set up. Remember to include a meta viewport tag in the head to set the zoom level.</p>
-				<p>You link to internal pages by referring to the <code>id</code> of the page you want to show. For example, to <a href="#two" >link</a> to the page with an <code>id</code> of "two", my link would have a <code>href="#two"</code> in the code.</p>
-				<h3>Show internal pages:</h3>
+                <div role="main" class="ui-content" id="map-canvas" data-selected-track=""></div> <!-- Div contenant la map du circuit vélo-->
                 <p><a href="#welcome" data-role="button">Accueil</a></p>
 			</div>
 			<div data-role="footer" data-theme="d">
@@ -111,7 +111,9 @@
             </div>
             <div data-role="content" >
                 <h2>Les équipes</h2>
-                <p></p>
+                <div id="team_list">
+
+                </div>
                 <p><a href="#welcome" data-role="button">Accueil</a></p>
             </div>
             <div data-role="footer" data-theme="d">
