@@ -26,14 +26,14 @@ function getTeams(){
         crossDomain: true,
         beforeSend : function() {$.mobile.loading('show')},
         complete   : function() {$.mobile.loading('hide')},
-        data       : {username : 'subin', password : 'passwordx'},
+        //data       : {username : 'subin', password : 'passwordx'},
         dataType   : 'json',
         success    : function(json) {
             updateDOM(json)
         },
         error      : function() {
             //console.error("error");
-            alert('Now working!');
+            alert('Not working!');
         }
     });
 }
