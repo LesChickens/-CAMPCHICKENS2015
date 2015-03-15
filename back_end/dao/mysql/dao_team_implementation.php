@@ -2,7 +2,7 @@
 /**
 *   Classe qui implémente la DAO_TEAM, méthodes permettant de dialoguer avec le SGBD
 */
-class Dao_Team_Implementation implements Dao_Team_Interface
+class dao_team_implementation implements dao_team_interface
 {
    /**
    * Insert une équipe dans la BD
@@ -40,16 +40,6 @@ class Dao_Team_Implementation implements Dao_Team_Interface
     $sql = 'SELECT * FROM team';
     $sqlQuery = new SqlQuery($sql);
     return $this->getList($sqlQuery);
-/*
-    $data = array(
-               array('teamName' => 'équipe 1','members' => array( array('name' => 'nom1'),array('name' => 'nom2'),array('name' => 'nom3'))),
-               array('teamName' => 'équipe 2','members' => array( array('name' => 'nom1'),array('name' => 'nom2'),array('name' => 'nom3'))),
-               array('teamName' => 'équipe 3','members' => array( array('name' => 'nom1'),array('name' => 'nom2'),array('name' => 'nom3'))),
-               array('teamName' => 'équipe 4','members' => array( array('name' => 'nom1'),array('name' => 'nom2'),array('name' => 'nom3'))),
-               array('teamName' => 'équipe 5','members' => array( array('name' => 'nom1'),array('name' => 'nom2'),array('name' => 'nom3'))));
-
-    return $data;
-    */
    }
 
    /**
