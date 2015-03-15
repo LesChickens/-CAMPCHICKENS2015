@@ -11,7 +11,7 @@ class DAOFactory{
 	 * @return Dao_Team_Implementation
 	 */
 	public static function getTeamDAO(){
-		return new Dao_Team_Implementation();
+		return new dao_team_implementation();
 	}
 
 

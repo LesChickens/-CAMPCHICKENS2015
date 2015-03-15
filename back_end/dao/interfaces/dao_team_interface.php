@@ -2,7 +2,7 @@
 /**
 * Interface permetant de faire des opérations sur la table team
 */
-interface Dao_Team_Interface
+interface dao_team_interface
 {
    /**
    * Insert une équipe dans la BD

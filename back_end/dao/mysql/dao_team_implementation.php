@@ -39,7 +39,7 @@ class Dao_Team_Implementation implements Dao_Team_Interface
 
     $sql = 'SELECT * FROM team';
     $sqlQuery = new SqlQuery($sql);
-    return $this->getRow($sqlQuery);
+    return $this->getList($sqlQuery);
 /*
     $data = array(
                array('teamName' => 'équipe 1','members' => array( array('name' => 'nom1'),array('name' => 'nom2'),array('name' => 'nom3'))),
@@ -65,5 +65,71 @@ class Dao_Team_Implementation implements Dao_Team_Interface
    public function removeMember($idTeam,Member $Member){
 
    }
+
+    /**
+     * Fonction qui créée un objet Team avec les données d'un record en BD de la table team
+     *
+     * @param
+     * @return Team
+     */
+    protected function readRow($row){
+        $team = new Team();
+
+        $team->setId($row['id']);
+        $team->setName($row['name']);
+
+        return $team;
+    }
+
+    protected function getList($sqlQuery){
+        $tab = QueryExecutor::execute($sqlQuery);
+        $ret = array();
+        for($i=0;$i<count($tab);$i++){
+            $ret[$i] = $this->readRow($tab[$i]);
+        }
+        return $ret;
+    }
+
+    /**
+     * Get row
+     *
+     * @return BannerfinishMySql
+     */
+    protected function getRow($sqlQuery){
+        $tab = QueryExecutor::execute($sqlQuery);
+        if(count($tab)==0){
+            return null;
+        }
+        return $this->readRow($tab[0]);
+    }
+
+    /**
+     * Execute sql query
+     */
+    protected function execute($sqlQuery){
+        return QueryExecutor::execute($sqlQuery);
+    }
+
+
+    /**
+     * Execute sql query
+     */
+    protected function executeUpdate($sqlQuery){
+        return QueryExecutor::executeUpdate($sqlQuery);
+    }
+
+    /**
+     * Query for one row and one column
+     */
+    protected function querySingleResult($sqlQuery){
+        return QueryExecutor::queryForString($sqlQuery);
+    }
+
+    /**
+     * Insert row to table
+     */
+    protected function executeInsert($sqlQuery){
+        return QueryExecutor::executeInsert($sqlQuery);
+    }
 }
 ?>

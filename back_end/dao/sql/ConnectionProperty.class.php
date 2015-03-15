@@ -8,10 +8,10 @@
 class ConnectionProperty{
 
     //config césar
-	private static $host = 'localhost';
+	private static $host = '127.0.0.1';
 	private static $user = 'root';
-	private static $password = '';
-	private static $database = 'aac';
+	private static $password = 'root';
+	private static $database = 'acc';
 
 	//config léo
 //    private static $host = 'localhost';

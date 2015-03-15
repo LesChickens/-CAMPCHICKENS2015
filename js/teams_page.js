@@ -22,18 +22,19 @@ $(document).ready(function(){
  */
 function getTeams(){
     $.ajax({
-        url        : "back_end/teams.php",
-        crossDomain: true,
-        beforeSend : function() {$.mobile.loading('show')},
-        complete   : function() {$.mobile.loading('hide')},
-        //data       : {username : 'subin', password : 'passwordx'},
-        dataType   : 'json',
-        success    : function(json) {
+        type        : "post",
+        url         : "back_end/controller/controller.php",
+        beforeSend  : function() {$.mobile.loading('show')},
+        complete    : function() {$.mobile.loading('hide')},
+        data        : {team : 'all'},
+        dataType:"json",
+        success     : function(json) {
+            //méthode qui parse le JSON et l'ajoute au DOM
             updateDOM(json)
         },
-        error      : function() {
+        error       : function(er) {
             //console.error("error");
-            alert('Not working!');
+            alert('Now working!'+er);
         }
     });
 }
@@ -43,12 +44,12 @@ function getTeams(){
  */
 function updateDOM(json){
     //on parcours le json recu, pour chaque objet team, on génère le code html et on l'ajoute au DOM
-    var divContant="";
+    var divContent="";
     $.each(json, function(i, team) {
-        divContant+=teamHtml(team.teamName,team.members);
+        divContent+=teamHtml(team.teamName,team.members);
     });
    //On ajoute le code html généré dasn le DOM
-   $("#team_list").html(divContant);
+   $("#team_list").html(divContent);
    //On applique le style collapsible de jquery mobile
    $("#team_list").enhanceWithin();
 }
@@ -64,12 +65,13 @@ function teamHtml(teamName,members){
         "<h3>"+teamName+"</h3>"+
         "<ul data-role='listview'>";
 
+    if(members){
         $.each(members, function(i, member) {
-           //On ajoute le nom de chaque membre
+            //On ajoute le nom de chaque membre
             html+= "<li>"+member.name+"</li>";
         });
-
-        html+="</ul>"+
+    }
+    html+="</ul>"+
     "</div><!-- /collapsible -->";
     return html;
 }
