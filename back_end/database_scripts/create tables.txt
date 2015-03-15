@@ -15,3 +15,23 @@ CREATE TABLE events (
 	category VARCHAR(20) NOT NULL,
 	level VARCHAR(20) NOT NULL
 );
+
+--
+-- Structure de la table `team`
+--
+
+CREATE TABLE IF NOT EXISTS `team` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `team`
+--
+
+INSERT INTO `team` (`id`, `name`) VALUES
+(1, 'Team 1'),
+(2, 'Team 2'),
+(3, 'Team 3'),
+(4, 'Team 4');
