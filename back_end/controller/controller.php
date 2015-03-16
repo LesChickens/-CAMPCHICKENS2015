@@ -16,8 +16,13 @@ $transaction = new Transaction();
 if (isset($_POST["team"]) && !empty($_POST["team"])) {
 
     if ($_POST["team"] == "all") {
+
         //On va chercher la liste de toutes les équipes
         $teams = DAOFactory::getTeamDAO()->getAllTeams();
+
+        //On récupère tous les membres appartenant à une team
+        $members = DAOFactory::getMemberDAO()->getAllTeamMembers();
+//        $members="";
         //On charge la vue qui se charge de générer le JSON pour le front end
         require_once('../view/team_view.php');
     }

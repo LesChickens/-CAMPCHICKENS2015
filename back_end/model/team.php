@@ -42,7 +42,7 @@ class Team
         return $this->_members;
     }
 
-    public function setMember($members)
+    public function setMembers($members)
     {
         $this->_members = $members;
     }

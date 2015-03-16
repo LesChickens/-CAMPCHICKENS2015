@@ -10,6 +10,11 @@ class Member
 	private $_name;
 	//Prénom du membre
     private $_firstName;
+    //Prénom du membre
+    private $_teamId;
+    //Prénom du membre
+    private $_email;
+
 
 
 	public function getId()
@@ -40,7 +45,7 @@ class Member
 
 	public function getFirstName()
     {
-        return $this->_name;
+        return $this->_firstName;
     }
 
     public function setFirstName($firstName)
@@ -49,6 +54,38 @@ class Member
             throw new InvalidArgumentException('Le prénom du membre ne peut pas être vide');
 
         $this->_firstName = $firstName;
+    }
+
+    /**
+    * @return mixed
+    */
+    public function getEmail()
+    {
+        return $this->_email;
+    }
+
+    /**
+     * @param mixed $email
+     */
+    public function setEmail($email)
+    {
+        $this->_email = $email;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTeamId()
+    {
+        return $this->_teamId;
+    }
+
+    /**
+     * @param mixed $teamId
+     */
+    public function setTeamId($teamId)
+    {
+        $this->_teamId = $teamId;
     }
 }
 

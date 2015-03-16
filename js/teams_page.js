@@ -29,6 +29,7 @@ function getTeams(){
         data        : {team : 'all'},
         dataType:"json",
         success     : function(json) {
+            alert(json);
             //méthode qui parse le JSON et l'ajoute au DOM
             updateDOM(json)
         },

@@ -12,6 +12,8 @@
     //On inclut toutes les interfaces et leur implémentation
 	require_once('../dao/interfaces/dao_team_interface.php');
 	require_once('../dao/mysql/dao_team_implementation.php');
+    require_once('../dao/interfaces/dao_member_interface.php');
+    require_once('../dao/mysql/dao_member_implementation.php');
 
 
 ?>
