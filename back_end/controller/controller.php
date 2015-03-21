@@ -12,7 +12,7 @@ $transaction = new Transaction();
 * Controlleur principal, il check les $_POST que l'on envoie en parametre de notre requette http ajax
 * pour savoir quel model appelé
 */
-
+$_POST["team"]="all";
 if (isset($_POST["team"]) && !empty($_POST["team"])) {
 
     if ($_POST["team"] == "all") {
@@ -26,6 +26,9 @@ if (isset($_POST["team"]) && !empty($_POST["team"])) {
         //On charge la vue qui se charge de générer le JSON pour le front end
         require_once('../view/team_view.php');
     }
+}
+else{
+    echo"error";
 }
 
 

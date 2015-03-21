@@ -29,7 +29,7 @@ function getTeams(){
         data        : {team : 'all'},
         dataType:"json",
         success     : function(json) {
-            alert(json);
+            //alert(json);
             //méthode qui parse le JSON et l'ajoute au DOM
             updateDOM(json)
         },
@@ -47,7 +47,7 @@ function updateDOM(json){
     //on parcours le json recu, pour chaque objet team, on génère le code html et on l'ajoute au DOM
     var divContent="";
     $.each(json, function(i, team) {
-        divContent+=teamHtml(team.teamName,team.members);
+        divContent+=teamHtml(team.teamName,team.teamMembers);
     });
    //On ajoute le code html généré dasn le DOM
    $("#team_list").html(divContent);
@@ -69,7 +69,7 @@ function teamHtml(teamName,members){
     if(members){
         $.each(members, function(i, member) {
             //On ajoute le nom de chaque membre
-            html+= "<li>"+member.name+"</li>";
+            html+= "<li>"+member.firstname+" "+member.name+"</li>";
         });
     }
     html+="</ul>"+

@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="MAMP Apache" />
+  <component name="PublishConfigData" serverName="MAMP Apache">
+    <serverData>
+      <paths name="MAMP Apache">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/Camp-Chickens-2015" />
+            <mapping />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="test">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/Camp-Chickens-2015" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
 </project>
