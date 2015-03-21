@@ -14,6 +14,7 @@ class ConnectionFactory{
 	 */
 	static public function getConnection(){
 		$conn = mysql_connect(ConnectionProperty::getHost(), ConnectionProperty::getUser(), ConnectionProperty::getPassword());
+        mysql_set_charset('utf8',$conn);
 		mysql_select_db(ConnectionProperty::getDatabase());
 		if(!$conn){
 			throw new Exception('could not connect to database');
