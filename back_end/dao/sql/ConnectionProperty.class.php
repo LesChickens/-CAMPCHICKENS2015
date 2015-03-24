@@ -7,11 +7,17 @@
  */
 class ConnectionProperty{
 
+    //config olympe
+	private static $host = 'sql2.olympe.in';
+	private static $user = 'vm4xd1cj';
+	private static $password = 'testtest';
+	private static $database = 'vm4xd1cj';
+
     //config césar
-	private static $host = '127.0.0.1';
-	private static $user = 'root';
-	private static $password = 'root';
-	private static $database = 'acc';
+//    private static $host = '127.0.0.1';
+//    private static $user = 'root';
+//    private static $password = 'root';
+//    private static $database = 'acc';
 
 	//config léo
 //    private static $host = 'localhost';

@@ -23,7 +23,7 @@ $(document).ready(function(){
 function getTeams(){
     $.ajax({
         type        : "post",
-        url         : "back_end/controller/controller.php",
+        url         : url,
         beforeSend  : function() {$.mobile.loading('show')},
         complete    : function() {$.mobile.loading('hide')},
         data        : {team : 'all'},

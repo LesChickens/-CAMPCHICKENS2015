@@ -10,10 +10,12 @@
 	require_once('../dao/DAOFactory.php');
 
     //On inclut toutes les interfaces et leur implémentation
+
+    //Dao team
 	require_once('../dao/interfaces/dao_team_interface.php');
 	require_once('../dao/mysql/dao_team_implementation.php');
+
+    //Dao member
     require_once('../dao/interfaces/dao_member_interface.php');
     require_once('../dao/mysql/dao_member_implementation.php');
 
-
-?>

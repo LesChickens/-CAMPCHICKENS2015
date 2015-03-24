@@ -6,5 +6,3 @@ require_once('../model/team.php');
 
 
 
-
-?>

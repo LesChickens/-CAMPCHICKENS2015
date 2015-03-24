@@ -1,5 +1,20 @@
 /*general.js*/
 
+/***
+ * URL VERS LE CONTROLLEUR PHP
+ */
+
+    //localhost
+    //var url="back_end/controller/controller.php";
+
+    //olympe
+    var url="http://share-your-knowledge.olympe.in/Camp-Chickens-2015/back_end/controller/controller.php";
+
+    //prod
+    //var url="";
+
+
+
 /**
  * Fonction qui retourne la hauteur réel du "contant" de la page
  * @returns {number}
