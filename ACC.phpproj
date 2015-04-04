@@ -52,6 +52,7 @@
     <Folder Include="css\images\icons-png\" />
     <Folder Include="css\images\icons-svg\" />
     <Folder Include="gpx\" />
+    <Folder Include="help\" />
     <Folder Include="js\" />
     <Folder Include="js\old\" />
   </ItemGroup>
@@ -276,6 +277,7 @@
     <Content Include="css\jquery.mobile.theme-1.4.5.css" />
     <Content Include="css\jquery.mobile.theme-1.4.5.min.css" />
     <Content Include="gpx\long_chicken_track.gpx" />
+    <Content Include="help\DAO Camp Chickens.pdf" />
     <Content Include="index.html" />
     <Content Include="js\events.js" />
     <Content Include="js\general.js" />
