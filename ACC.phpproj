@@ -53,6 +53,9 @@
     <Folder Include="css\images\icons-svg\" />
     <Folder Include="gpx\" />
     <Folder Include="help\" />
+    <Folder Include="images\" />
+    <Folder Include="images\icons\" />
+    <Folder Include="images\icons\android\" />
     <Folder Include="js\" />
     <Folder Include="js\old\" />
   </ItemGroup>
@@ -278,10 +281,16 @@
     <Content Include="css\jquery.mobile.theme-1.4.5.min.css" />
     <Content Include="gpx\long_chicken_track.gpx" />
     <Content Include="help\DAO Camp Chickens.pdf" />
+    <Content Include="images\icons\android\hdpi_72x72.png" />
+    <Content Include="images\icons\android\ldpi_36x36.png" />
+    <Content Include="images\icons\android\mdpi_48x48.png" />
+    <Content Include="images\icons\android\xhdpi_96x96.png" />
+    <Content Include="images\icons\android\xxhdpi_144x144.png" />
     <Content Include="index.html" />
     <Content Include="js\events.js" />
     <Content Include="js\general.js" />
-    <Content Include="js\google_map.js" />
+    <Content Include="js\google_map_cycling_ride.js" />
+    <Content Include="js\google_map_itinerary.js" />
     <Content Include="js\jquery-1.8.3.min.js" />
     <Content Include="js\jquery.mobile-1.4.5.js" />
     <Content Include="js\jquery.mobile-1.4.5.min.js" />
