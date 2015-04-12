@@ -33,6 +33,7 @@
     <Compile Include="back_end\events.php" />
     <Compile Include="back_end\model\member.php" />
     <Compile Include="back_end\model\team.php" />
+    <Compile Include="back_end\front_door.php" />
     <Compile Include="back_end\teams.php" />
     <Compile Include="back_end\view\team_view.php" />
   </ItemGroup>
@@ -62,8 +63,10 @@
     <Folder Include="js\old\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="back_end\database_scripts\create tables.txt" />
-    <Content Include="back_end\database_scripts\populate data.txt" />
+    <Content Include="back_end\database_scripts\-- phpMyAdmin SQL Dump" />
+    <Content Include="back_end\database_scripts\create_tables.txt" />
+    <Content Include="back_end\database_scripts\dump_bd_acc_24-03-2015.sql" />
+    <Content Include="back_end\database_scripts\populate_data.txt" />
     <Content Include="config.xml" />
     <Content Include="css\general.css" />
     <Content Include="css\images\ajax-loader.gif" />
