@@ -4,8 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> <!-- meta pour optimiser l'affichage de la google map sur les mobiles -->
-		<title>Camp Chickens 2015</title>
-		<!-- Imports CSS-->
+
+        <title>Camp Chickens 2015</title>
+
+        <!-- Imports CSS-->
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css"/>
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons-1.4.5.min.css"/>
         <link rel="stylesheet" href="css/camp-chickens-v1.css" />
@@ -50,10 +52,10 @@
 		</div>
 		<div data-role="page" id="itinerary" data-dom-cache="true">
 			<div data-role="header">
+                <a href="#welcome" class="ui-btn ui-icon-home ui-btn-icon-left" style="border:none;background-color:inherit;height:50%;"></a>
 				<h1>Itinéraire</h1>
 			</div>
-			<div data-role="content" >
-				<h2>Itinéraire à suivre pour se rendre au camp chicken </h2>
+			<div data-role="content" style="padding:0;">
                 <div id="map-itinerary"></div>
                 <p><a href="#itineraryDetails" data-role="button">Plan de route</a></p>
                 <p><a href="#welcome" data-role="button">Accueil</a></p>
