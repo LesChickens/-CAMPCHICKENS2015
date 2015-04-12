@@ -60,7 +60,7 @@
     <Folder Include="images\splash_screens\" />
     <Folder Include="images\splash_screens\android\" />
     <Folder Include="js\" />
-    <Folder Include="js\old\" />
+    <Folder Include="js\libraries\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="back_end\database_scripts\-- phpMyAdmin SQL Dump" />
@@ -304,7 +304,6 @@
     <Content Include="js\jquery.mobile-1.4.5.js" />
     <Content Include="js\jquery.mobile-1.4.5.min.js" />
     <Content Include="js\jquery.mobile-1.4.5.min.map" />
-    <Content Include="js\old\jquery.mobile-1.2.1.min.js" />
     <Content Include="js\teams_page.js" />
     <Content Include="LICENSE" />
     <Content Include="README.md" />

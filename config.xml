@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
-<widget xmlns     = "http://www.w3.org/ns/widgets"
+<widget xmlns = "http://www.w3.org/ns/widgets"
 				xmlns:gap = "http://phonegap.com/ns/1.0"
-				id        = "com.leschickens.campchickens2015"
-				version   = "1.0.0">
+				id = "com.leschickens.campchickens2015.02"
+				version = "1.0.0">
 		<name>
 			#CAMPCHICKENS2015
 		</name>
 		<description>
-			#CAMPCHICKENS2015 : l'application mobile du camp d'entraînement des Chickens, club de triathlon à Montréal
+			#CAMPCHICKENS2015 : le camp d'entraînement des Chickens, club de triathlon à Montréal
 		</description>
 		<author href="http://www.leschickens.com" email="contact@leschickens.com">
 				Les Chickens - IT Poulets
