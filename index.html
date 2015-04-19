@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html manifest="camp_chickens_2015.appcache">
+<html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,6 +17,8 @@
 	<script defer type="application/javascript" src="js/general.js"></script>
 	<script src="js/libraries/google_maps_api_03.js"></script>
 	<script defer type="application/javascript" src="js/cycling_itinerary.js"></script>
+	<script src="js/libraries/flurry.js"></script>
+	<script>FlurryAgent.startSession("RPNJS23KPYYV85RM9T4W");</script>
 </head>
 <body>
 	<div data-role="page" id="welcome">
@@ -26,19 +28,24 @@
 			</h1>
 		</div>
 		<div data-role="content">
-			<h2 style="text-align: center;">
-				#CAMPCHICKENS2015
-			</h2>
-			<p>
-				<a href="#checklist" data-role="button" data-rel="page" data-transition="slide" class="ui-btn ui-icon-check ui-corner-all ui-btn-icon-left">
-					Checklist
-				</a>
-			</p>
-			<p>
-				<a href="#cycling_itinerary" data-role="button" data-rel="page" data-transition="slide" class="ui-btn ui-icon-navigation ui-corner-all ui-btn-icon-left" style="height: 20%;">
-					Parcours de vélo
-				</a>
-			</p>
+			<div class="ui-body ui-body-a ui-corner-all">
+				<h4 class="center">
+					#CAMPCHICKENS2015
+				</h4>
+				<p class="center">
+					le camp d'entraînement des <a href="http://www.leschickens.com" target="_blank">Chickens</a>, club de triathlon à Montréal
+				</p>
+				<p>
+					<a href="#checklist" data-role="button" data-rel="page" data-transition="slide" class="ui-btn ui-icon-check ui-corner-all ui-btn-icon-left">
+						Checklist
+					</a>
+				</p>
+				<p>
+					<a href="#cycling_itinerary" data-role="button" data-rel="page" data-transition="slide" class="ui-btn ui-icon-navigation ui-corner-all ui-btn-icon-left" style="height: 20%;">
+						Parcours de vélo
+					</a>
+				</p>
+			</div>
 		</div>
 	</div>
 	<div id="checklist" data-role="page">
@@ -49,34 +56,128 @@
 			</h1>
 		</div>
 		<div data-role="content">
-			<ul data-role="listview" data-inset="true" data-divider-theme="a">
-				<li data-role="list-divider">
-					Natation
-				</li>
-				<li>
-					Wetsuit
-				</li>
-				<li data-role="list-divider">
-					Vélo
-				</li>
-				<li>
-					Vélo
-				</li>
-				<li data-role="list-divider">
-					Course
-				</li>
-				<li>
-					Souliers
-				</li>
-			</ul>
-			<ul data-role="listview" data-inset="true" data-divider-theme="a">
-				<li data-role="list-divider">
-					Party
-				</li>
-				<li>
-					Déguisement
-				</li>
-			</ul>
+			<div data-role="collapsibleset" data-content-theme="a" class="ui-collapsible-set ui-group-theme-inherit ui-corner-all">
+				<div data-role="collapsible" class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-themed-content ui-first-child">
+					<h3 class="ui-collapsible-heading">
+						Natation
+					</h3>
+					<ul data-role="listview" class="ui-listview">
+						<li>
+							Wetsuit
+						</li>
+						<li>
+							Lunettes
+						</li>
+						<li>
+							Casque de bain
+						</li>
+					</ul>
+				</div>
+				<div data-role="collapsible" class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-themed-content ui-first-child">
+					<h3 class="ui-collapsible-heading">
+						Vélo
+					</h3>
+					<ul data-role="listview" class="ui-listview">
+						<li>
+							Vélo
+						</li>
+						<li>
+							Casque
+						</li>
+						<li>
+							Lunettes de vélo
+						</li>
+						<li>
+							Chandail de vélo
+						</li>
+						<li>
+							Gants de vélo
+						</li>
+						<li>
+							Short de vélo
+						</li>
+						<li>
+							Souliers de vélo
+						</li>
+						<li>
+							Bidons
+						</li>
+					</ul>
+				</div>
+				<div data-role="collapsible" class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-themed-content ui-first-child">
+					<h3 class="ui-collapsible-heading">
+						Course
+					</h3>
+					<ul data-role="listview" class="ui-listview">
+						<li>
+							Chandail de course
+						</li>
+						<li>
+							Fuel belt
+						</li>
+						<li>
+							Bas
+						</li>
+						<li>
+							Souliers de course
+						</li>
+					</ul>
+				</div>
+				<div data-role="collapsible" class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-themed-content ui-first-child">
+					<h3 class="ui-collapsible-heading">
+						Nutrition
+					</h3>
+					<ul data-role="listview" class="ui-listview">
+						<li>
+							Poudre
+						</li>
+						<li>
+							Gels/jujubes
+						</li>
+						<li>
+							Barres énergétiques
+						</li>
+						<li>
+							Souliers de course
+						</li>
+					</ul>
+				</div>
+				<div data-role="collapsible" class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-themed-content ui-first-child">
+					<h3 class="ui-collapsible-heading">
+						Party
+					</h3>
+					<ul data-role="listview" class="ui-listview">
+						<li>
+							Déguisement
+						</li>
+						<li>
+							Alcool fort
+						</li>
+					</ul>
+				</div>
+				<div data-role="collapsible" class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-themed-content ui-first-child">
+					<h3 class="ui-collapsible-heading">
+						Divers
+					</h3>
+					<ul data-role="listview" class="ui-listview">
+						<li>
+							Sac
+						</li>
+						<li>
+							Lunettes de soleil
+						</li>
+						<li>
+							Jeux divers
+						</li>
+						<li>
+							Vêtements chauds
+						</li>
+						<li>
+							Bonne humeur
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div id="cycling_itinerary" data-role="page">
