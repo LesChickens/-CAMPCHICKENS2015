@@ -1,7 +1,13 @@
 /*general.css*/
-#map-canvas { width: 100%; padding: 0; }
-#team_list .ui-collapsible-heading .ui-btn { border-top-width: 1px !important; }
+#map-canvas {
+	width: 100%;
+	padding: 0;
+}
 
-h1,h2,h3,h3,h5{
-    color: white;
+#team_list .ui-collapsible-heading .ui-btn {
+	border-top-width: 1px !important;
+}
+
+h1, h2, h3, h3, h5 {
+	color: white;
 }
