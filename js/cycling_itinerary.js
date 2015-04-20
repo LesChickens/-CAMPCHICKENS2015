@@ -101,7 +101,7 @@ function drawMap(latlng) {
 
 	// Add an overlay to the map of current lat/lng
 	var marker = new google.maps.Marker({
-		position: latlng,
+		position: defaultLatLng,
 		map: map,
 		title: "Bonne ride !",
 		icon: ""
