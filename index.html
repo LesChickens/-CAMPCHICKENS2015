@@ -21,7 +21,7 @@
 	<script>FlurryAgent.startSession("RPNJS23KPYYV85RM9T4W");</script>
 </head>
 <body>
-	<div data-role="page" id="welcome">
+	<div id="welcome" data-role="page">
 		<div data-role="header">
 			<h1>
 				Les Chickens
@@ -47,10 +47,17 @@
 				</p>
 			</div>
 		</div>
+		<div data-role="footer" data-theme="b" data-position="fixed">
+			<p style="padding-right: 5%;text-align: right;">
+				<a href="#about" data-rel="page" data-transition="fade" style="height: 20%;">
+					À propos
+				</a>
+			</p>
+		</div>
 	</div>
 	<div id="checklist" data-role="page">
 		<div data-role="header">
-			<a href="#welcome" data-rel="page" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-left" style="border: none; background-color: #da0301; height: 50%;"></a>
+			<a href="#welcome" data-rel="page" data-transition="slide" data-direction="reverse" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-right" style="border: none; background-color: #da0301; height: 50%;"></a>
 			<h1>
 				Checklist
 			</h1>
@@ -85,19 +92,19 @@
 							Casque
 						</li>
 						<li>
-							Lunettes de vélo
+							Lunettes
 						</li>
 						<li>
-							Chandail de vélo
+							Chandail
 						</li>
 						<li>
-							Gants de vélo
+							Gants
 						</li>
 						<li>
-							Short de vélo
+							Short
 						</li>
 						<li>
-							Souliers de vélo
+							Souliers
 						</li>
 						<li>
 							Bidons
@@ -110,10 +117,13 @@
 					</h3>
 					<ul data-role="listview" class="ui-listview">
 						<li>
-							Chandail de course
+							Chandail
 						</li>
 						<li>
 							Fuel belt
+						</li>
+						<li>
+							Short
 						</li>
 						<li>
 							Bas
@@ -182,7 +192,7 @@
 	</div>
 	<div id="cycling_itinerary" data-role="page">
 		<div data-role="header">
-			<a href="#welcome" data-rel="page" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-left" style="border: none; background-color: #da0301; height: 50%;"></a>
+			<a href="#welcome" data-rel="page" data-transition="slide" data-direction="reverse" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-right" style="border: none; background-color: #da0301; height: 50%;"></a>
 			<h1>
 				Parcours de vélo
 			</h1>
@@ -190,6 +200,48 @@
 		<div data-role="content" style="padding: 0; margin: 0;">
 			<!-- Div contenant la map du parcours de vélo -->
 			<div id="map-canvas"></div>
+		</div>
+	</div>
+	<div id="about" data-role="page">
+		<div data-role="header" data-theme="b">
+			<h1>
+				À propos
+			</h1>
+			<a href="#welcome" data-role="button" data-rel="page" data-transition="fade" class="ui-btn ui-btn-right ui-icon-home ui-btn-icon-left" style="border: none; background-color: black; height: 50%;"></a>
+		</div>
+		<div data-role="content">
+			<p class="center">
+				#CAMPCHICKENS2015
+				<br />
+				version 0.1
+				<br />
+				<br />
+				<a href="https://github.com/LesChickens/Camp-Chickens-2015" target="_blank" data-role="button" class="ui-btn ui-icon-star ui-corner-all ui-btn-icon-left">
+					RATE IT ON GOOGLE PLAY
+				</a>
+			</p>
+			<br />
+			<p>
+				Revisions:
+				<ul>
+					<li>
+						0.1: cycling itinerary, checklist
+					</li>
+				</ul>
+			</p>
+			<br />
+			<p>
+				Developed by:
+				<ul>
+					<li>
+						César Jeanroy: <a href="https://github.com/cesar" target="_blank">@cesar</a>
+					</li>
+					<li>
+						Léo Davesne: <a href="https://github.com/leodavesne" target="_blank">@leodavesne</a>
+					</li>
+				</ul>
+				Fork it on <a href="https://github.com/LesChickens/Camp-Chickens-2015" target="_blank">GitHub</a> and check our <a href="https://github.com/LesChickens" target="_blank">other open source projects</a>.
+			</p>
 		</div>
 	</div>
 </body>
