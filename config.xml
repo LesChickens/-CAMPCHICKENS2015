@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns = "http://www.w3.org/ns/widgets"
 				xmlns:gap = "http://phonegap.com/ns/1.0"
-				id = "com.leschickens.campchickens2015.02"
+				id = "com.leschickens.campchickens2015_02"
 				version = "1.0.0">
 		<name>
 			#CAMPCHICKENS2015
