@@ -403,5 +403,6 @@
     <Content Include="js\libraries\google_maps_api_03.js" />
     <Content Include="LICENSE" />
     <Content Include="README.md" />
+    <Content Include="splash.png" />
   </ItemGroup>
 </Project>
