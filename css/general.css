@@ -15,3 +15,12 @@ h1, h2, h3, h3, h5 {
 .center {
 	text-align: center;
 }
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+	text-shadow: none;
+}
+
+.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {
+	font-weight: normal;
+	text-shadow: none;
+}
