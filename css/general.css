@@ -24,3 +24,7 @@ h1, h2, h3, h3, h5 {
 	font-weight: normal;
 	text-shadow: none;
 }
+
+.ui-bar-b {
+	border-style: solid none none;
+}
