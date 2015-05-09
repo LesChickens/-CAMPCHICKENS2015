@@ -1,7 +1,7 @@
 #CAMPCHICKENS2015
 =======================================
 
-##CAMPCHICKENS2015 application for Android.
+'#CAMPCHICKENS2015 application for Android.
 
 Download it for free: https://play.google.com/store/apps/details?id=com.leschickens.campchickens2015_02
 
