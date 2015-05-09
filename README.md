@@ -1,17 +1,17 @@
-Camp Chickens 2015
+#CAMPCHICKENS2015
 =======================================
 
-Camp Chickens 2015 application for iOS, Android and Windows Phone.
+#CAMPCHICKENS2015 application for Android.
 
-Download it for free: (in progress)
+Download it for free: https://play.google.com/store/apps/details?id=com.leschickens.campchickens2015_02
 
 
 Author
 -------
 
-César Jeanroy
+César Jeanroy: https://github.com/cesar3030
 
-Léo Davesne: http://about.me/leodavesne
+Léo Davesne: https://github.com/leodavesne
 
 
 Trello Board
