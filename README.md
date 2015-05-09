@@ -6,6 +6,10 @@
 Download it for free:
 - Android: https://play.google.com/store/apps/details?id=com.leschickens.campchickens2015_02
 
+Les Chickens
+-------
+
+Triathlon club in Montreal: http://www.leschickens.com
 
 Author
 -------
