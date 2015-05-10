@@ -31,6 +31,7 @@
 	<preference name="android-minSdkVersion" value="7" />
 	<!-- android: MIN SDK version supported on the target device. MAX version is blank by default -->
 	<preference name="android-installLocation" value="auto" />
+	<preference name="SplashScreenDelay" value="0" />
 	<!-- Define app icon for each platform. -->
 	<icon src="images/icons/android/ldpi_36x36.png" gap:platform="android" gap:qualifier="ldpi" />
 	<icon src="images/icons/android/mdpi_48x48.png" gap:platform="android" gap:qualifier="mdpi" />
@@ -45,6 +46,7 @@
 	<gap:splash src="images/splash_screens/android/hdpi_portrait_480x800.png" gap:platform="android" gap:qualifier="port-hdpi" />
 	<gap:splash src="images/splash_screens/android/xhdpi_portrait_720x1280.png" gap:platform="android" gap:qualifier="port-xhdpi" />
 	<!--	Define access to external domains -->
+	<!--	Google Maps API -->
 	<access origin="*.google.com" />
 	<access origin="*.googleapis.com" />
 	<access origin="*.gstatic.com" />

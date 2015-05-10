@@ -28,3 +28,10 @@ h1, h2, h3, h3, h5 {
 .ui-bar-b {
 	border-style: solid none none;
 }
+
+.ui-page-theme-b a:visited,
+html .ui-bar-b a:visited,
+html .ui-body-b a:visited,
+html body .ui-group-theme-b a:visited {
+	color: #666666;
+}
