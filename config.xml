@@ -45,5 +45,12 @@
 	<gap:splash src="images/splash_screens/android/hdpi_portrait_480x800.png" gap:platform="android" gap:qualifier="port-hdpi" />
 	<gap:splash src="images/splash_screens/android/xhdpi_portrait_720x1280.png" gap:platform="android" gap:qualifier="port-xhdpi" />
 	<!--	Define access to external domains -->
-	<access origin="*"/>
+	<access origin="*.google.com" />
+	<access origin="*.googleapis.com" />
+	<access origin="*.gstatic.com" />
+	<access origin="*.googleusercontent.com" />
+	<access origin="google.com" subdomains="true"/>
+	<access origin="googleapis.com" subdomains="true"/>
+	<access origin="gstatic.com" subdomains="true"/>
+	<access origin="googleusercontent.com" subdomains="true"/>
 </widget>

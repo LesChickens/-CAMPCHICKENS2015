@@ -14,11 +14,11 @@
 	<link rel="stylesheet" type="text/css" href="css/general.css" />
 	<script src="js/libraries/jquery-1.8.3.min.js"></script>
 	<script src="js/libraries/jquery.mobile-1.4.5.min.js"></script>
-	<script defer type="application/javascript" src="js/general.js"></script>
-	<script src="js/libraries/google_maps_api_03.js"></script>
-	<script defer type="application/javascript" src="js/cycling_itinerary.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAIySsXK5go-rtuojjlm_iZnqzVA-Y8lQ"></script>
 	<script src="js/libraries/flurry.js"></script>
 	<script>FlurryAgent.startSession("RPNJS23KPYYV85RM9T4W");</script>
+	<script defer type="application/javascript" src="js/general.js"></script>
+	<script defer type="application/javascript" src="js/cycling_itinerary.js"></script>
 </head>
 <body>
 	<div id="welcome" data-role="page">
@@ -436,10 +436,11 @@
 			<h1>
 				Parcours de vélo
 			</h1>
+			<a href="#recenter" class="ui-btn ui-btn-right ui-icon-location ui-btn-icon-left" style="border: none; background-color: #da0301; height: 50%;"></a>
 		</div>
 		<div data-role="content" style="padding: 0; margin: 0;">
 			<!-- Div contenant la map du parcours de vélo -->
-			<div id="map-canvas"></div>
+			<div id="map_canvas"></div>
 		</div>
 	</div>
 	<div id="about" data-role="page">
@@ -475,7 +476,7 @@
 						<a href="https://github.com/leodavesne" target="_blank">@leodavesne</a>
 					</li>
 				</ul>
-				Fork it on <a href="https://github.com/LesChickens/Camp-Chickens-2015" target="_blank">GitHub</a> and check our <a href="https://github.com/LesChickens" target="_blank">other open source projects</a>
+				Fork it on <a href="https://github.com/LesChickens/-CAMPCHICKENS2015" target="_blank">GitHub</a> and check our <a href="https://github.com/LesChickens" target="_blank">other open source projects</a>
 			</p>
 			<br />
 			<p>

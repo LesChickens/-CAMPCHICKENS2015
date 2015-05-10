@@ -1,49 +1,57 @@
-/***
- * Fichier contenant le code JavaScript permettant d'afficher la google map des circuits vélo.
- *
- * @author César Jeanroy
- * @date 08-02-2015
- *
- * Last reviews:
- *  - 08-02-2015: Ajout des fonctions qui instancient la map et qui affiche le circuit sélectionné
- */
+// Coordonnées de D'Jouv
+var homeCoordinates = new google.maps.LatLng(45.3925870, -72.2244330);
+var bikeRideCenterCoordinates = new google.maps.LatLng(45.34704819902393, -72.21535555000003);
 
-/***********************
- *  global variables   *
- ***********************/
-
-// Variable contenant l'objet a utiliser pour center la map sur le camp chicken
-var defaultLatLng = new google.maps.LatLng(45.3925870, -72.2244330);
-
-// Variable globale contenant la map
 var map = null;
-
-var geoLocalisation = null;
-
-/*******************
- *  event handled  *
- *******************/
+var markers = new Array(2);
+var watchId;
 
 $('a[href="#cycling_itinerary"]').click(function () {
-	// Si la map n'a pas déja été créé, on la créé
-	if (map == null)
-		mapInitialization();
+	if (map == null) {
+		initializeMap();
+	}
 });
 
-$('a[href="#welcome"]').click(function () {
-	// Si la map n'a pas déja été créé, on la créé
-	if (geoLocalisation != null)
-		navigator.geolocation.clearWatch(geoLocalisation);
+$('a[href="#recenter"]').click(function () {
+	if (map != null) {
+		map.setCenter(bikeRideCenterCoordinates);
+	}
 });
 
-/************************
- * JavaScript functions *
- ************************/
+function initializeMap() {
+	drawMap(bikeRideCenterCoordinates);
 
-/**
- * Fonction qui charge le circuit
- */
-function load_track() {
+	if (navigator.geolocation) {
+		// Si la géolocalisation est possible via le navigateur on cale un vélo qui suit la position courante du device
+		watchId = navigator.geolocation.watchPosition(moveBicycleMarker, positionError, { maximumAge: 500000, enableHighAccuracy: true, timeout: 6000 });
+	}
+
+	resizeMap();
+}
+
+function drawMap(latlng) {
+	var parameters = {
+		zoom: 12,
+		center: latlng,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+
+	if (map == null) {
+		map = new google.maps.Map(document.getElementById("map_canvas"), parameters);
+	}
+
+	// Marqueur de D'Jouv
+	var marker = new google.maps.Marker({
+		position: homeCoordinates,
+		map: map,
+		title: "D'Jouv",
+		icon: "images/home.png"
+	});
+
+	loadTrack();
+}
+
+function loadTrack() {
 	$.ajax({
 		type: "GET",
 		url: "gpx/long_chicken_track.gpx",
@@ -52,9 +60,8 @@ function load_track() {
 			var points = [];
 			var bounds = new google.maps.LatLngBounds();
 
-			// On parse le fichier gpx pour créer ajouter toutes les coordonnées du parcours dans l'objet LatLngBounds
+			// On parse le fichier gpx pour ajouter toutes les coordonnées du parcours dans l'objet LatLngBounds
 			$(xml).find("trkpt").each(function () {
-
 				// On extrait du xml la latitude et la longitude de chaque position du fichier gpx
 				var lat = $(this).attr("lat");
 				var lon = $(this).attr("lon");
@@ -67,7 +74,6 @@ function load_track() {
 
 			// On crée le tracé du parcours
 			var poly = new google.maps.Polyline({
-				// Use your own style here
 				path: points,
 				strokeColor: "#FF0000",
 				strokeOpacity: .7,
@@ -83,84 +89,53 @@ function load_track() {
 	});
 }
 
-/**
- * Fonction qui instancie la map et la centre sur le point passé en paramètre
- * @param latlng Point google map où la carte doit être centrée (google.maps.LatLng)
- */
-function drawMap(latlng) {
-	// On stocke en JSON les paramètres de notre carte
-	var myOptions = {
-		zoom: 12,
-		center: latlng,
-		mapTypeId: google.maps.MapTypeId.ROADMAP
-	};
+function moveBicycleMarker(coordinates) {
+	putMarker(coordinates, "Moi sur le bike", "images/bicycle.png");
+}
 
-	// On crée l'instance de la map avec le options choisies et on la dessine dans le div dont l'id est passé en paramètre du constructeur
-	if (map == null)
-		map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+function putMarker(position, name, iconPath) {
+	removeMarker(name);
 
-	// Add an overlay to the map of current lat/lng
 	var marker = new google.maps.Marker({
-		position: defaultLatLng,
+		position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
 		map: map,
-		title: "Bonne ride !",
-		icon: ""
+		title: name,
+		icon: iconPath
 	});
 
-	// On dessine le circuit une fois la map affichée
-	load_track();
+	markers.push(new Array(name, marker));
 }
 
-/**
- * Fonction qui initialise la map avec la position actuelle de l'utilisateur
- * ou seulement le circuit si sa position n'a pas su être déterminée
- */
-function mapInitialization() {
-
-	if (navigator.geolocation) {
-		// Si la géolocalisation est possible via le navigateur on dessine la map avec la position courante du device
-		geoLocalisation = navigator.geolocation.watchPosition(drawMapWithPosition, positionError, { maximumAge: 500000, enableHighAccuracy: true, timeout: 6000 });
+function removeMarker(markerName) {
+	if (!$.isEmptyObject(markers)) {
+		for (var i = 0; i < markers.length; i++) {
+			if (markers[i] != null && markers[i][0] == markerName) {
+				markers[i][1].setMap(null);
+				markers.splice(i, 1);
+			}
+		}
 	}
-	else {
-		// No geolocation support,on utilise la position par défaut
-		drawMap(defaultLatLng);
-	}
-
-	// On set le bon height en fonction de la taille de l'écran du téléphone
-	var mapHeight = getRealContentHeight();
-	$("#map-canvas").height(mapHeight);
 }
 
-/**
- * Fonction qui gère les erreurs liées à la géolocalisation
- * @param error
- */
 function positionError(error) {
 	var info = "Erreur lors de la géolocalisation : ";
+
 	switch (error.code) {
 		case error.TIMEOUT:
-			info += "Timeout !";
+			info += "timeout !";
 			break;
 		case error.PERMISSION_DENIED:
-			//Si la géolocalisation n'est pas autorisée on affiche le circuit en le centant sur le camp
-			drawMap(defaultLatLng);
-			info += "Vous n’avez pas donné la permission, on affiche la circuit par défault";
+			info += "vous n’avez pas donné la permission, on affiche le circuit par défault";
 			break;
 		case error.POSITION_UNAVAILABLE:
-			info += "La position n’a pu être déterminée";
+			info += "la position n’a pu être déterminée";
 			break;
 		case error.UNKNOWN_ERROR:
-			info += "Erreur inconnue";
+			info += "erreur inconnue";
 			break;
 	}
-	console.log(info);
 }
 
-/**
- * Fonction qui dessine la map avec la position courante du device
- * @param pos objet position contenant la position courante du device
- */
-function drawMapWithPosition(pos) {
-	// Location found, show map with these coordinates
-	drawMap(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+function resizeMap() {
+	$("#map_canvas").height($(window).height() - $.mobile.activePage.find("div[data-role='header']:visible").outerHeight());
 }
